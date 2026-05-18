@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    /* UCB LOAN brand: yellow primary, deep blue accent */
+    --primary: 48 100% 50%;
+    --primary-foreground: 220 60% 15%;
+
+    --brand-blue: 215 85% 35%;
+    --brand-blue-foreground: 0 0% 100%;
+
+    --secondary: 48 100% 96%;
+    --secondary-foreground: 220 60% 15%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 48 100% 92%;
+    --accent-foreground: 220 60% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 48 100% 50%;
+
+    --radius: 0.75rem;
+
+    --gradient-header: linear-gradient(135deg, hsl(48 100% 55%), hsl(45 100% 50%));
+    --shadow-card: 0 2px 12px -4px hsl(220 30% 20% / 0.08);
+    --shadow-button: 0 4px 14px -2px hsl(215 85% 35% / 0.35);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+  /* Latin digits use Inter for clearer "1" */
+  .num, tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
